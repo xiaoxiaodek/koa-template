@@ -1,22 +1,28 @@
-module.exports = {
-  apps : [{
-    script: 'index.js',
-    watch: '.'
-  }, {
-    script: './service-worker/',
-    watch: ['./service-worker']
-  }],
+let instances = require('os').cpus().length;
+if (instances > 8) {
+  instances = 8;
+}
 
-  deploy : {
-    production : {
-      user : 'SSH_USERNAME',
-      host : 'SSH_HOSTMACHINE',
-      ref  : 'origin/master',
-      repo : 'GIT_REPOSITORY',
-      path : 'DESTINATION_PATH',
-      'pre-deploy-local': '',
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production',
-      'pre-setup': ''
+module.exports = {
+  apps: [
+    {
+      name: 'template',
+      script: './app.js',
+      log_date_format: 'YY-MM-DD HH:mm:ss',
+      instances,
+      exec_mode: 'cluster',
+      env: {
+        NODE_ENV: 'dev'
+      },
+      env_sit: {
+        NODE_ENV: 'sit'
+      },
+      env_uat: {
+        NODE_ENV: 'uat'
+      },
+      env_prod: {
+        NODE_ENV: 'prod'
+      }
     }
-  }
+  ]
 };
