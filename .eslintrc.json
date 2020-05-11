@@ -1,0 +1,82 @@
+{
+  "env": {
+    "node": true,
+    "commonjs": true,
+    "es6": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "google"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "max-len": [
+      "warn",
+      {
+        "code": 160
+      }
+    ],
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "arrow-parens": [
+      "error",
+      "as-needed",
+      {
+        "requireForBlockBody": true
+      }
+    ],
+    "quote-props": [
+      "error",
+      "as-needed",
+      {
+        "unnecessary": false,
+        "numbers": true
+      }
+    ],
+    "operator-linebreak": [
+      "error",
+      "before"
+    ],
+    "require-atomic-updates": "off",
+    "space-infix-ops": "error",
+    "no-unsafe-finally": "off",
+    "no-console": "off",
+    "no-inner-declarations": "off",
+    "prefer-const": "off",
+    "require-jsdoc": "off",
+    "valid-jsdoc": "off",
+    "comma-dangle": "off",
+    "block-spacing": "off",
+    "camelcase": "off",
+    "padded-blocks": "off",
+    "guard-for-in": "off",
+    "arrow-spacing": [
+      "error",
+      {
+        "before": true,
+        "after": true
+      }
+    ],
+    "object-shorthand": [
+      "error",
+      "always",
+      {
+        "avoidQuotes": true,
+        "avoidExplicitReturnArrows": true
+      }
+    ],
+    "no-undef-init": "error"
+  }
+}
