@@ -48,7 +48,7 @@
     "node-xlsx": "^0.15.0",
     "promise-retry": "^1.1.1",
     "serialize-error": "^5.0.0",
-    "ssh2": "^0.8.9",
+    "ssh2": "^1.4.0",
     "statsd-client": "^0.4.4",
     "text-to-svg": "^3.1.5",
     "xlsx": "^0.14.0",
