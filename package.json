@@ -41,7 +41,7 @@
     "koa-unless": "^1.0.7",
     "lodash": "^4.17.15",
     "mkdirp": "^0.5.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "mongoose": "^5.9.3",
     "neo-async": "^2.6.1",
     "node-fetch": "^2.6.0",
